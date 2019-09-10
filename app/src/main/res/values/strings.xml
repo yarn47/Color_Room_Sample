@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Color_Room_Sample</string>
+    <string name="header_button">Creating Random Color</string>
+</resources>

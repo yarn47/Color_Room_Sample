@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.example.color_room_sample.ui.common.BindingAdapters" />
+
+        <variable
+            name="colorInfo"
+            type="com.example.color_room_sample.api.response.ColorInfo" />
+
+        <variable
+            name="viewModel"
+            type="com.example.color_room_sample.ui.ColorViewModel" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="3dp"
+        android:elevation="5dp"
+        android:onClick="@{() -> viewModel.onColorClicked(colorInfo)}">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            style="@style/TextViewSize15Color222222Style"
+            android:colorInfo="@{colorInfo}"/>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

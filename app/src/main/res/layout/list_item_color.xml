@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.example.color_room_sample.ui.common.BindingAdapters"/>
+        <variable
+            name="colorEntity"
+            type="com.example.color_room_sample.db.entity.ColorEntity" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:elevation="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="20dp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintEnd_toStartOf="@id/layoutColorInfo"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:background="@color/colorAccent"
+                tools:text="wine"
+                tools:textColor="#ffffff"
+                android:colorEntity="@{colorEntity}"
+                android:id="@+id/txtColor"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/layoutColorInfo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="2.5"
+                app:layout_constraintStart_toEndOf="@id/txtColor">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextViewSize15Color222222Style"
+                    android:padding="3dp"
+                    android:text="@{colorEntity.hexCode}"
+                    tools:text="hex : wine"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextViewSize15Color222222Style"
+                    android:padding="3dp"
+                    android:text="@{colorEntity.hsvCode}"
+                    tools:text="hsv : wine"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextViewSize15Color222222Style"
+                    android:padding="3dp"
+                    android:text="@{colorEntity.rgbCode}"
+                    tools:text="rgb : wine"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextViewSize15Color222222Style"
+                    android:padding="3dp"
+                    android:text="@{colorEntity.hslCode}"
+                    tools:text="hsl : wine"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
