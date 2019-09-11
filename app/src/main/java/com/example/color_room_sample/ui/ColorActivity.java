@@ -12,7 +12,6 @@ import com.example.color_room_sample.R;
 import com.example.color_room_sample.databinding.ActivityMainBinding;
 import com.example.color_room_sample.databinding.TabIconBinding;
 import com.example.color_room_sample.ui.common.BaseActivity;
-import com.google.android.material.tabs.TabLayout;
 
 import javax.inject.Inject;
 
@@ -61,4 +60,6 @@ public class ColorActivity extends BaseActivity<ColorViewModel> {
     public ColorViewModel getViewModel() {
         return ViewModelProviders.of(this, factory).get(ColorViewModel.class);
     }
+
+
 }

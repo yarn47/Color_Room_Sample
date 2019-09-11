@@ -12,8 +12,6 @@ import com.example.color_room_sample.db.entity.ColorEntity;
 
 import java.util.List;
 
-import io.reactivex.Maybe;
-
 @Dao
 public interface ColorDao extends BaseDao<ColorEntity> {
 
